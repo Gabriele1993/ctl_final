@@ -4,9 +4,6 @@ Before:
 
 
 
-
-
-
 Q(initial): Are you representing yourself in an eviction case? - this QnA does not provide legal advice 
 A: Yes 
 	Q(other):GOTO:inspection
@@ -15,21 +12,54 @@ A: No
 	Q(Notforyou): This questionnaire does not apply to you. Thank you.
 
 
-
-Q(inspection): Have you given your landlord reasonable access to your apartment to inspect it and make repairs?
+Q(inspection): Have you given your landlord reasonable access to your apartment to inspect it and make repairs?  
 A:Yes
 	Q(otherz):GOTO:heat
 A:No
-	Q(others):GOTO:heat
+	Q(bad):You have to this is the law. Your landlord must have your permission to enter your apartment. Housing courts generally require landlords to give tenants at least 24 hours’ notice before entering. The notice may be less if there is an emergency, like a water leak. Please come again if the problem was not fixed.
+
+
+
+
+
+
+
+<Begins here>
 
 
 Q(heat): Is there heat in every habitable room and every room containing a toilet, shower, or bathtub to at least 68°F (20° C) between 7:00 A.M. and 11:00 P.M. and at least 64°F (17° C) between 11:01 P.M. and 6:59 A.M. every day other than during the period from June 15th to September 15th, both inclusive, in each year except and to the extent the occupant is required to provide the fuel under a written letting agreement. The temperature shall at no time exceed 78°F (25° C) during the heating season. 
-A: Yes
-	Q(3.1):GOTO:end
-A: No
-	Q(3.2):GOTO:end
+A( ): Yes
+	Q(3.1):GOTO:venting
+A(X): No
+	Q(3.2):GOTO:venting
+
+
+Q(venting): Do you believe there is improper venting or use of space heater or water heater?
+A(X): Yes
+	Q(4.1):GOTO:electricity 
+A( ): No
+	Q(4.2):GOTO:electricity 
+
+
+Q(electricity): Is there no electricity or gas?
+A(X):Yes 
+A(  ): No
 
 
 
+
+
+
+
+
+
+
+
+
+<THE CLOSURE>
 Q(end):
 A: please take a look at the regulations https://www.mass.gov/files/documents/2017/09/11/105cmr410.pdf
+
+
+
+
