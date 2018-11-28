@@ -1,32 +1,35 @@
 Before:
 <input type="hidden" name="name" value="deposit.docx"/>
-<input type="hidden" name="docx_uri" value="https://gabriele1993.github.io/finalproject/deposit.docx"/>
+<input type="hidden" name="docx_uri" value="https://gabriele1993.github.io/finalproject/housing-code-checklist.docx"/>
 
 
-Q(1): Are you representing yourself in an eviction case?
+
+
+
+
+Q(initial): Are you representing yourself in an eviction case? - this QnA does not provide legal advice 
 A: Yes 
-	Q(1.22):GOTO:inspection
-
-
-
-
-
-
-		
-
-
-
-
-
-
-
-
-
+	Q(other):GOTO:inspection
 
 A: No
 	Q(Notforyou): This questionnaire does not apply to you. Thank you.
 
 
 
-
 Q(inspection): Have you given your landlord reasonable access to your apartment to inspect it and make repairs?
+A:Yes
+	Q(otherz):GOTO:heat
+A:No
+	Q(others):GOTO:heat
+
+
+Q(heat): Is there heat in every habitable room and every room containing a toilet, shower, or bathtub to at least 68°F (20° C) between 7:00 A.M. and 11:00 P.M. and at least 64°F (17° C) between 11:01 P.M. and 6:59 A.M. every day other than during the period from June 15th to September 15th, both inclusive, in each year except and to the extent the occupant is required to provide the fuel under a written letting agreement. The temperature shall at no time exceed 78°F (25° C) during the heating season. 
+A: Yes
+	Q(3.1):GOTO:end
+A: No
+	Q(3.2):GOTO:end
+
+
+
+Q(end):
+A: please take a look at the regulations https://www.mass.gov/files/documents/2017/09/11/105cmr410.pdf
