@@ -1,0 +1,35 @@
+Before:
+<input type="hidden" name="name" value="deposit.docx"/>
+<input type="hidden" name="docx_uri" value="https://gabriele1993.github.io/ctl/deposit.docx"/>
+
+
+Q(initial): Are you a tenant who is looking to have your security deposit returned from your landlord?
+A:Yes
+	Q(first): Did your landlord not put your money in a bank account that is separate, which is protected from creditors and separate from your money?
+	A(X): Yes
+		Q(second): Did your landlord give you a receipt within 30 days of receiving your security deposit? (With the amount of the security deposit, the name and address of the bank where it is being held, and the bank account number) 
+		A(X): Yes
+			Q(third): Did your landlord not allow you to inspect the security deposit records? 
+			A(X):Yes
+				Q(fourth): Did your landlord ask you to give up your security deposit rights?
+				A(X):Yes
+					Q(fifth): Did your landlord fail to transfer the security deposit to the new owner?
+					A(X):[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Yes
+
+
+
+
+					A( ):No
+						Q(1.1.1.1.1.1.2):GOTO:Notforyou
+				A( ):No
+					Q(1.1.1.1.1.2):GOTO:fifth
+			A( ):No
+				Q(1.1.1.1.2):GOTO:fourth
+		A( ): No
+			Q(1.1.1.2):GOTO:third 
+	A( ): No
+		Q(1.1.2):GOTO:second
+
+
+A: No
+	Q(Notforyou): This questionnaire does not apply to you. Thank you.
