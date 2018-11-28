@@ -1,6 +1,6 @@
 Before:
 <input type="hidden" name="name" value="deposit.docx"/>
-<input type="hidden" name="docx_uri" value="https://gabriele1993.github.io/ctl/deposit.docx"/>
+<input type="hidden" name="docx_uri" value="https://gabriele1993.github.io/finalproject/deposit.docx"/>
 
 
 Q(initial): Are you a tenant who is looking to have your security deposit returned from your landlord?
