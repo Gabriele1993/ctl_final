@@ -1,1 +1,28 @@
 
+Q(1): Are you representing yourself in an eviction case?
+A: Yes 
+	Q(1.22):GOTO:inspection
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+A: No
+	Q(Notforyou): This questionnaire does not apply to you. Thank you.
+
+
+
+
+Q(inspection): Have you given your landlord reasonable access to your apartment to inspect it and make repairs?
