@@ -15,12 +15,24 @@ A:Yes
 				A(X):Yes
 					Q(fifth): Did your landlord fail to transfer the security deposit to the new owner?
 					A(X):[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Yes
+	
 
 
 
 
-					A( ):No
-						Q(1.1.1.1.1.1.2):GOTO:Notforyou
+
+
+						Q(additional): Did you answer with "no" to all the questions? (except the first one)
+						A: Yes
+							Q(names): You likely do not have a valid claim to have your security deposit returned.  Thank you for using our QnA.
+
+								
+						A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] No
+							Q(1.1.1.1.1.1.1.2):GOTO:additional
+				
+					A( ): No
+						Q(1.1.1.1.1.1.2):GOTO:additional
+						
 				A( ):No
 					Q(1.1.1.1.1.2):GOTO:fifth
 			A( ):No
