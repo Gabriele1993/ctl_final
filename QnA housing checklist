@@ -16,7 +16,7 @@ Q(inspection): Have you given your landlord reasonable access to your apartment 
 A:Yes
 	Q(otherz):GOTO:heat
 A:No
-	Q(bad):You have to this is the law. Your landlord must have your permission to enter your apartment. Housing courts generally require landlords to give tenants at least 24 hours’ notice before entering. The notice may be less if there is an emergency, like a water leak. Please come again if the problem was not fixed.
+	Q(bad): The law says you have to. Your landlord must have your permission to enter your apartment. Housing courts generally require landlords to give tenants at least 24 hours’ notice before entering. The notice may be less if there is an emergency, like a water leak. Please come again if the problem was not fixed.
 
 
 
@@ -27,7 +27,7 @@ A:No
 <Begins here>
 
 
-Q(heat): Is there heat in every habitable room and every room containing a toilet, shower, or bathtub to at least 68°F (20° C) between 7:00 A.M. and 11:00 P.M. and at least 64°F (17° C) between 11:01 P.M. and 6:59 A.M. every day other than during the period from June 15th to September 15th, both inclusive, in each year except and to the extent the occupant is required to provide the fuel under a written letting agreement. The temperature shall at no time exceed 78°F (25° C) during the heating season. 
+Q(heat): Is there heat? - In every habitable room and every room containing a toilet, shower, or bathtub to at least 68°F (20° C) between 7:00 A.M. and 11:00 P.M. and at least 64°F (17° C) between 11:01 P.M. and 6:59 A.M. every day other than during the period from June 15th to September 15th, both inclusive, in each year except and to the extent the occupant is required to provide the fuel under a written letting agreement. The temperature shall at no time exceed 78°F (25° C) during the heating season. 
 A( ): Yes
 	Q(3.1):GOTO:venting
 A(X): No
@@ -43,7 +43,112 @@ A( ): No
 
 Q(electricity): Is there no electricity or gas?
 A(X):Yes 
+	Q(5.1):GOTO:inadequate
 A(  ): No
+	Q(5.2):GOTO:inadequate
+
+
+Q(inadequate): Is there no or inadequate electrical outlets or lighting in common areas?
+A(X): Yes 
+	Q(6.1):GOTO:shutoff
+A: No
+	Q(6.2):GOTO:shutoff
+
+
+Q(shutoff): Is there a shut-off and/or failure to restore electricity, gas, or water?
+A(X): Yes
+	Q(7.1):GOTO:watersupply
+A: No
+	Q(7.2):GOTO:watersupply
+
+
+Q(watersupply):Is there a safe water supply?
+A: Yes
+	Q(8.1):GOTO:system
+A(X):No
+	Q(8.2):GOTO:system
+
+
+Q(system): Is there a working toilet or sewage disposal system?
+A: Yes
+	Q(9.1):GOTO:inadequateexits
+A(X): No
+	Q(9.2):GOTO:inadequateexits
+
+
+Q(inadequateexits): Are there any Inadequate exits, including the obstruction of any exit, passageway, or common area through which you exit in an
+emergency?
+A(X): Yes
+	Q(10.1):GOTO:inadequatelocks
+A: No
+	Q(10.2):GOTO:inadequatelocks
+
+
+Q(inadequatelocks): Are there no or inadequate locks for entry doors for either the apartment or the building?
+A(X): Yes
+	Q(11.1):GOTO:rats
+A: No
+	Q(11.2):GOTO:rats
+
+
+Q(rats): Is there any accumulation of garbage or filth that may provide food or shelter for rodents, insects, or other pests; or that may contribute to accidents or disease?
+A(X): Yes
+	Q(12.1):GOTO:Leadpaint
+A: No
+	Q(12.2):GOTO:Leadpaint
+
+
+Q(Leadpaint):Is there any Lead paint that a child under age 6 could reach?
+A(X): Yes
+	Q(13.1):GOTO:roof
+A: No
+	Q(13.2):GOTO:roof
+
+
+
+Q(roof): Are there defects with the roof, foundation, or other structural defects that may expose you to fire, burns, shock, accident, or other danger?
+A(X): Yes
+	Q(14.1):GOTO:improperlyinstalled
+	
+A: No
+	Q(14.2):GOTO:improperlyinstalled
+
+
+Q(improperlyinstalled): Are there any Improperly installed or maintained electrical, plumbing, or heating appliances or equipment that expose the occupant to fire, burns, shock, accident, or other dangers?
+A(X): Yes
+	Q(15.1):GOTO:hotwater
+A: No
+	Q(15.2):GOTO:hotwater
+
+
+Q(hotwater):Is there no or not enough hot or cold water (including amount, pressure, and temperature) for 24 hours or longer?
+A(X): Yes
+	Q(16.1):GOTO:detector
+A: No
+	Q(16.2):GOTO:detector
+
+
+
+Q(detector):Is there no smoke detector or carbon monoxide alarm in good working order?
+A(X): Yes
+	Q(17.1):GOTO:defects
+A: No
+	Q(17.2):GOTO:defects
+
+
+
+Q(defects): Are there any defects in building materials that may lead to release of asbestos dust?
+A(X): Yes
+	Q(18.1):GOTO:inspector
+A: No
+	Q(18.2):GOTO:inspector
+
+
+
+Q(inspector): Are there any other violations of the Sanitary Code the inspector finds dangerous to health and safety?
+A(X): Yes
+A: No
+
 
 
 
