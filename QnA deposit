@@ -22,13 +22,13 @@ A:Yes
 
 
 
-						Q(additional): Did you answer with "no" to all the questions? (except the first one)
+						Q(additional): Did you answer "no" to all the questions? (except the first one)
 						A: Yes
 							Q(names): You likely do not have a valid claim to have your security deposit returned.  Thank you for using our QnA.
 
 								
 						A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] No
-							Q(1.1.1.1.1.1.1.2):GOTO:additional
+							Q(1.1.1.1.1.1.1.2):You likely do have a valid claim to have your security deposit returned.  Thank you for using our QnA.
 				
 					A( ): No
 						Q(1.1.1.1.1.1.2):GOTO:additional
