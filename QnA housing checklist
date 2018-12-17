@@ -10,8 +10,7 @@ A: Yes
 
 A: No
 	Q(Notforyou): This questionnaire does not apply to you. Thank you.
-A: go to the end
-	Q(other11):GOTO:theend
+
 
 
 Q(inspection): Have you given your landlord reasonable access to your apartment to inspect it and make repairs?  
