@@ -14,7 +14,8 @@ A:Yes
 				Q(fourth): Did your landlord ask you to give up your security deposit rights?
 				A(X):Yes
 					Q(fifth): Did your landlord fail to transfer the security deposit to the new owner?
-					A(X):[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Yes
+					A(X):[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]  Yes.  By pressing yes you will receive  a copy of your results. (recommended)
+						
 	
 
 
@@ -27,8 +28,10 @@ A:Yes
 							Q(names): You likely do not have a valid claim to have your security deposit returned.  Thank you for using our QnA.
 
 								
-						A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] No
+						A: No
 							Q(1.1.1.1.1.1.1.2):You likely do have a valid claim to have your security deposit returned.  Thank you for using our QnA.
+							A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]  Would you like a copy of your results?  - (recommended)
+							A: No
 				
 					A( ): No
 						Q(1.1.1.1.1.1.2):GOTO:additional
@@ -45,3 +48,6 @@ A:Yes
 
 A: No
 	Q(Notforyou): This questionnaire does not apply to you. Thank you.
+
+
+
