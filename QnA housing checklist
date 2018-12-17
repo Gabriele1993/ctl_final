@@ -518,7 +518,7 @@ A(X): No
 
 
 Q(laundtyroom): Did your landlord provide and place electric light fixtures and switches that allow safe and reasonable use of the Laundry room?
-A: Yes
+A( ): Yes
 	Q(63.1):GOTO:pantry
 A(X): No
 	Q(58.51):GOTO:pantry
@@ -894,14 +894,14 @@ A(X): No
 	Q(100.24):GOTO:areallelectrical
 
 Q(areallelectrical): Are all electrical fixtures, outlets, and wiring installed correctly and kept free of leaks, blocks, and other defects?
-A( ): Yes
+A(  ): Yes
 	Q(112.1):GOTO:smokedetecandcarbon
 A(X): No
 	Q(112.2):GOTO:smokedetecandcarbon
 
 	
 Q(smokedetecandcarbon): Are all smoke detectors and carbon monoxide alarms installed correctly and kept free of leaks, blocks, and other defects?
-A( ): Yes
+A(  ): Yes
 	Q(113.1):GOTO:heatingandventilation
 A(X): No
 	Q(113.2):GOTO:heatingandventilation
