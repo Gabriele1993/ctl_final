@@ -102,7 +102,7 @@ A: No
 
 
 
-Q(name): What is your name?
+Q(name): What is your full name?
 X:
 	Q(egfegg):GOTO:address
 
@@ -135,7 +135,13 @@ X:
 
 Q(secdep): What is the amount of the Security deposit?
 X:
-	Q(grhrte):GOTO:theend
+	Q(grhrte):GOTO:accept
+
+Q(accept): What day did the Landlord accept the security deposit from me you?
+X:
+	Q(regh):GOTO:theend
+A( ): I don't remember
+	Q(rertgew):GOTO:theend
 
 
 Q(theend): Well done, the QnA is done.
