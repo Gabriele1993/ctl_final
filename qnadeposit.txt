@@ -96,6 +96,12 @@ A: No
 	Q(trgsgh): Thank you for using our QnA.
 
 
+
+
+
+
+
+
 Q(name): What is your name?
 X:
 	Q(egfegg):GOTO:address
@@ -103,20 +109,39 @@ X:
 
 
 Q(address): What is your address?
-X: 
+X:
+	Q(edge):GOTO:date
+
+
 
 Q(date): What is the date?
 X:
+	Q(14.1):GOTO:landname
 
 
-Your landlord's name
+Q(landname): Your landlord's name
 X:
+	Q(frejg):GOTO:lordadd
 
 
-Your landlord's address
+Q(lordadd): What is your landlord's address?
+X:
+	Q(wergwtwf):GOTO:unit
 
-Name of Landlord:
 
-address of the rental unit
+Q(unit): What is the address of the rental unit?
+X:
+	Q(grhrte):GOTO:theend
+
+
+Q(theend): Well done, the QnA is done.
+A:[javascript:save2('mailmerge.csv',csv())]  Click here to get the Generated Document
+
+
+
+
+
+
+
 
 amount of security deposit)
