@@ -9,7 +9,7 @@ A:Yes
 A: No
 	Q(1.2):GOTO:Notforyou
 
-Q(Notforyou): This questionnaire does not apply to you. Would you like to continue anyway?
+Q(Notforyou): This questionnaire likely does not apply to you. Would you like to continue anyway?
 A: Yes 
 	Q(ergrg):GOTO:first
 A: No
@@ -22,7 +22,7 @@ A: No
 
 Q(first): Did your landlord put your money in a bank account that is separate? - (Which means it is protected from creditors and separate from your money)
 A(  ): Yes
-	Q(3.1):GOTO second
+	Q(3.1):GOTO:second
 A(don't know): I don't know
 	Q(Idonotknow):GOTO:second
 A(X): No
@@ -91,7 +91,7 @@ A: No
 
 Q(11): You likely do have a valid claim to have your security deposit returned. Would you like a "Generated Document" addressed to your Landlord, with a copy of your results?  - (highly recommended)
 A:  Yes
-	Q(egg):name	
+	Q(egg):GOTO:name	
 A: No
 	Q(trgsgh): Thank you for using our QnA.
 
@@ -114,7 +114,7 @@ X:
 
 
 
-Q(date): What is the date?
+Q(date): What is today's date?
 X:
 	Q(14.1):GOTO:landname
 
@@ -131,6 +131,10 @@ X:
 
 Q(unit): What is the address of the rental unit?
 X:
+	Q(regthrhe):GOTO:secdep
+
+Q(secdep): What is the amount of the Security deposit?
+X:
 	Q(grhrte):GOTO:theend
 
 
@@ -142,6 +146,3 @@ A:[javascript:save2('mailmerge.csv',csv())]  Click here to get the Generated Doc
 
 
 
-
-
-amount of security deposit)
