@@ -3,51 +3,120 @@ Before:
 <input type="hidden" name="docx_uri" value="https://gabriele1993.github.io/ctl_final/deposit.docx"/>
 
 
-Q(initial): Are you a tenant who is looking to have your security deposit returned from your landlord? - this QnA does not provide legal advice
+Q(initial): Do you want to ask for your security deposit back from your landlord? - this QnA does not provide legal advice
 A:Yes
-	Q(first): Did your landlord not put your money in a bank account that is separate, which is protected from creditors and separate from your money?
-	A(X): Yes
-		Q(second): Did your landlord give you a receipt within 30 days of receiving your security deposit? (With the amount of the security deposit, the name and address of the bank where it is being held, and the bank account number) 
-		A(X): Yes
-			Q(third): Did your landlord not allow you to inspect the security deposit records? 
-			A(X):Yes
-				Q(fourth): Did your landlord ask you to give up your security deposit rights?
-				A(X):Yes
-					Q(fifth): Did your landlord fail to transfer the security deposit to the new owner?
-					A(X):[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]  Yes.  By pressing yes you will receive  a copy of your results. (recommended)
-						
+	Q(1.1):GOTO:first
+A: No
+	Q(1.2):GOTO:Notforyou
+
+Q(Notforyou): This questionnaire does not apply to you. Would you like to continue anyway?
+A: Yes 
+	Q(ergrg):GOTO:first
+A: No
+	Q(1.3344): Thank you for using our QnA.
+
+
+
+
+
+
+Q(first): Did your landlord put your money in a bank account that is separate? - (Which means it is protected from creditors and separate from your money)
+A(  ): Yes
+	Q(3.1):GOTO second
+A(don't know): I don't know
+	Q(Idonotknow):GOTO:second
+A(X): No
+	Q(3.3):GOTO:second
+
+
+
+
+Q(second): Did your landlord give you a receipt within 30 days of receiving your security deposit? 
+A(  ): Yes
+	Q(3.22):GOTO:p
+A(X): No
+	Q(4.2):GOTO:third
+
+
+Q(p): Did the receipt list all of the following information: the amount of the security deposit, the name and address of the bank where it is being held, and the bank account number?   
+A: Yes 
+	Q(gfds):GOTO:third
+A(X): No
+	Q(cdfe):GOTO:third
+
+
+Q(third): Did your landlord stop you from inspecting the security deposit records? 
+A(X):Yes
+	Q(5.22):GOTO:fourth
+A( ):No
+	Q(6.2):GOTO:fourth
+
+
+				
+Q(fourth): Did your landlord ask you to give up your security deposit rights?
+A(X):Yes
+	Q(dfnegj):GOTO:newowner
+A( ):No
+	Q(ds):GOTO:newowner
+			
+
+Q(newowner): Did your landlord sell your building/apartment to a new owner?
+A: Yes
+	Q(6.23):GOTO:fifth
+A: No
+	Q(8.2):GOTO:additional
+
+
+
+Q(fifth): Did your landlord fail to transfer the security deposit to the new owner?
+A(X): Yes
+	Q(9.1):GOTO:additional
+A( ): No
+	Q(9.2):GOTO:additional	
+A(don't know): I don't know	
+	Q(9.3):GOTO:additional	
+		
 	
 
 
 
 
-
-
-						Q(additional): Did you answer "no" to all the questions? (except the first one)
-						A: Yes
-							Q(names): You likely do not have a valid claim to have your security deposit returned.  Thank you for using our QnA.
-
-								
-						A: No
-							Q(1.1.1.1.1.1.1.2):You likely do have a valid claim to have your security deposit returned.  Thank you for using our QnA.
-							A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]  Would you like a copy of your results?  - (recommended)
-							A: No
-				
-					A( ): No
-						Q(1.1.1.1.1.1.2):GOTO:additional
-						
-				A( ):No
-					Q(1.1.1.1.1.2):GOTO:fifth
-			A( ):No
-				Q(1.1.1.1.2):GOTO:fourth
-		A( ): No
-			Q(1.1.1.2):GOTO:third 
-	A( ): No
-		Q(1.1.2):GOTO:second
-
-
+Q(additional): Did you answer "no" to all the questions? 
+A: Yes
+	Q(names): You likely do not have a valid claim to have your security deposit returned.  Thank you for using our QnA.
 A: No
-	Q(Notforyou): This questionnaire does not apply to you. Thank you.
+	Q(10.2):GOTO:11
 
 
 
+Q(11): You likely do have a valid claim to have your security deposit returned. Would you like a "Generated Document" addressed to your Landlord, with a copy of your results?  - (highly recommended)
+A:  Yes
+	Q(egg):name	
+A: No
+	Q(trgsgh): Thank you for using our QnA.
+
+
+Q(name): What is your name?
+X:
+	Q(egfegg):GOTO:address
+
+
+
+Q(address): What is your address?
+X: 
+
+Q(date): What is the date?
+X:
+
+
+Your landlord's name
+X:
+
+
+Your landlord's address
+
+Name of Landlord:
+
+address of the rental unit
+
+amount of security deposit)
