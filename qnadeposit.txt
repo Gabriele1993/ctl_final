@@ -23,7 +23,7 @@ A: No
 Q(first): Did your landlord put your money in a bank account that is separate? - (Which means it is protected from creditors and separate from your money)
 A(  ): Yes
 	Q(3.1):GOTO:second
-A(don't know): I don't know
+A( ): I don't know
 	Q(Idonotknow):GOTO:second
 A(X): No
 	Q(3.3):GOTO:second
@@ -39,13 +39,13 @@ A(X): No
 
 
 Q(p): Did the receipt list all of the following information: the amount of the security deposit, the name and address of the bank where it is being held, and the bank account number?   
-A: Yes 
+A( ): Yes 
 	Q(gfds):GOTO:third
 A(X): No
 	Q(cdfe):GOTO:third
 
 
-Q(third): Did your landlord stop you from inspecting the security deposit records? 
+Q(third): Did your landlord stop you from seeing the security deposit records? 
 A(X):Yes
 	Q(5.22):GOTO:fourth
 A( ):No
@@ -73,7 +73,7 @@ A(X): Yes
 	Q(9.1):GOTO:additional
 A( ): No
 	Q(9.2):GOTO:additional	
-A(don't know): I don't know	
+A(  ): I don't know	
 	Q(9.3):GOTO:additional	
 		
 	
@@ -116,36 +116,35 @@ X:
 
 Q(date): What is today's date?
 X:
-	Q(14.1):GOTO:landname
+	Q(14.1):GOTO:landlordname
 
 
-Q(landname): Your landlord's name
+Q(landlordname): What is your landlord's name?
 X:
-	Q(frejg):GOTO:lordadd
+	Q(frejg):GOTO:landlordaddress
 
 
-Q(lordadd): What is your landlord's address?
+Q(landlordaddress): What is your landlord's address?
 X:
 	Q(wergwtwf):GOTO:unit
 
 
 Q(unit): What is the address of the rental unit?
 X:
-	Q(regthrhe):GOTO:secdep
+	Q(regthrhe):GOTO:secamount
 
-Q(secdep): What is the amount of the Security deposit?
+Q(secamount): What is the amount of the Security deposit?
 X:
-	Q(grhrte):GOTO:accept
+	Q(grhrte):GOTO:secdepositdate
 
-Q(accept): What day did the Landlord accept the security deposit from me you?
+Q(secdepositdate): What day did the Landlord accept the security deposit from you?
 X:
 	Q(regh):GOTO:theend
-A( ): I don't remember
-	Q(rertgew):GOTO:theend
+
 
 
 Q(theend): Well done, the QnA is done.
-A:[javascript:save2('mailmerge.csv',csv())]  Click here to get the Generated Document
+A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Click here to get the Generated Document
 
 
 
