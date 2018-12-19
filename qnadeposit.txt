@@ -144,6 +144,5 @@ X:
 
 
 Q(theend): Well done, the QnA is done.
-A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Click here to get the Generated Document
-
+A:[javascript:submit2('https://colarusso.pythonanywhere.com/2docx/','POST','','','','json_doc')] Click here to get the Generated Document
 
