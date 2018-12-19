@@ -116,15 +116,15 @@ X:
 
 Q(date): What is today's date?
 X:
-	Q(14.1):GOTO:landlordname
+	Q(14.1):GOTO:proprietario
 
 
-Q(landlordname): What is your landlord's name?
+Q(proprietario): What is your landlord's name?
 X:
-	Q(frejg):GOTO:landlordaddress
+	Q(frejg):GOTO:indirizzodue
 
 
-Q(landlordaddress): What is your landlord's address?
+Q(indirizzodue): What is your landlord's address?
 X:
 	Q(wergwtwf):GOTO:unit
 
@@ -135,9 +135,9 @@ X:
 
 Q(secamount): What is the amount of the Security deposit?
 X:
-	Q(grhrte):GOTO:secdepositdate
+	Q(grhrte):GOTO:giorno
 
-Q(secdepositdate): What day did the Landlord accept the security deposit from you?
+Q(giorno): What day did the Landlord accept the security deposit from you?
 X:
 	Q(regh):GOTO:theend
 
@@ -145,8 +145,4 @@ X:
 
 Q(theend): Well done, the QnA is done.
 A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Click here to get the Generated Document
-
-
-
-
 
