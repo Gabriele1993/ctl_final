@@ -985,6 +985,5 @@ A: No
 
 
 
-Q(end):
-A: Thank you for your time. Come back anytime. 
+Q(end):Thank you for your time. Come back anytime. 
 
