@@ -972,7 +972,7 @@ A( ): No
 	Q(18.31):GOTO:theend
 
 Q(theend): The End. Thank you for taking this QnA. Would you like a copy of the results? - (recommended)
-A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]  Yes
+A:[javascript:submit2('https://colarusso.pythonanywhere.com/2docx/','POST','','','','json_doc')] Yes
 	
 A: No
 	Q(efge):GOTO:end
@@ -986,4 +986,3 @@ A: No
 
 
 Q(end):Thank you for your time. Come back anytime. 
-
