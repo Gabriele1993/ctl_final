@@ -1,13 +1,64 @@
+Gabriele Ferrigno
 Mass Legal Help QnA
 
-This amazing project is for masslegalhelp Massachusetts legal aid programs put together this website to help you find practical information about your legal rights in Massachusetts
 
+The project can be found at the link below:
+Security Deposit QnA: https://gabriele1993.github.io/ctl_final/deposit.html 
+Housing Code Checklist QnA: https://gabriele1993.github.io/ctl_final/housingchecklist.html 
+
+
+The text of the QnA can be found at the link below: 
+Security Deposit QnA: 
+https://github.com/Gabriele1993/ctl_final/blob/master/qnadeposit.txt 
+Housing Code Checklist QnA: https://github.com/Gabriele1993/ctl_final/blob/master/QnAhousingchecklist.txt 
+
+
+This project is for Masslegalhelp (https://www.masslegalhelp.org), which is a Massachusetts legal aid program that puts together and promotes the spread of practical information about legal rights in Massachusetts. MassLegalHelp works in a variety of areas, from Immigration to Income benefits. The project I worked on specifically deals with Housing issues (property law). I worked on two projects in particular, a Security Deposit letter and the Housing Code Checklist (generally for eviction cases). 
+
+
+USERS:
+The Identified users for this project is the public at large. Hopefully, the Qnas will help many individuals, from the high and middle class to the lower class, by easing access to legal information that is not readily available to them through the use of technology.
+
+
+RESEARCH: 
+Research was needed for this project, as some of the information in the documents was not self-explanatory, especially for the housing code checklist. Several relevant sanitary code violations were researched for this project. 
+
+
+PROBLEM SOLVING & FRAMING:
+A problem I tried to solve, was to decrease the time it takes to read and fill in a document by instead making it automated and creating the document with conditional logic through the use of the QnA (Qnamarkup.com) technology. A problem I faced was in the Housing Checklist, the document is 16 pages long, it was hard to synthesize and create logic that would flow without removing too much information that is needed for the users to give an educated answer. The mail-merge process was also a problem I faced, which luckily through repetition and hard work I was able to solve. Unfortunately, the csv file kept opening with the “numbers” app rather than excel, which created “parsing” issues. Additionally, the mail-merge also gave me problems when I used a merge field/tag that had a number, so I changed that and made sure no merge fields that I used on my word document had numbers. Among other problems I encountered, one worth noting was the problem I faced when I did not realize that the mail-merge and QnA take into consideration whether the file is a doc or docx, as for it to work I had to change the format to docx, and allow my system preferences security settings to open the file. 
 
 
 SUSTAINABILITY:
-This QnA is built with the intention of it working for years to come on the masslegalhelp website. 
+This QnA is built with the intention of it working for years to come on the masslegalhelp website. It will be soon open to the public. Hosting is provided by the association and will be managed by them as well. 
 
 
 DISCLAIMER:
 The QnA includes a disclaimer, which hopefully will keep potential lawsuits away. 
+
+
+TESTING: 
+The Identified detailed user personas for testing were: a representative employee of MassLegalHelp, myself, and other students who generously gave their time to attempt to improve the logic of the Qnas. Below you can find the feedback and suggestions that were kindly provided by MassLegalHelp:
+
+ 
+
+
+	
+REFINEMENT: 
+The user feedback (above) was seriously considered and used to improve the final version of the product. Additionally, improvements and suggestions were implemented in the latest version in a uniform manner, therefore the final version is not the same as the original version. Also among the changes, more legal explanations were added and paraphrased so the users could better understand the content.  
+
+
+INTRO PITCH: 
+The pitch provided a basic outline and explanation of the project, since then the QnA project has much improved.
+
+
+DOCUMENTATION:		
+The product was written while keeping in mind that it should be accessible to most users. This means using simple and easy to read language. In fact, this is especially useful for people who do not speak English as their first language. 
+
+
+REAL WORLD VIABILITY:
+The product is almost ready for real-world use. The only step that is missing is a secure connection for the transfer of information (especially as some of the forms contain personal and private facts, which a user would likely not want out on the world wide web) 
+
+
+OVERALL:
+Overall, I think a stable and adequate product was produced. The QnA’s shall hopefully help save time and assist many people with their Housing related issues through the use of technology for years to come.  
 
