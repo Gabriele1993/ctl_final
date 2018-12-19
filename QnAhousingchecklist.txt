@@ -111,55 +111,48 @@ A(X): No
 
 Q(rats): Is there any accumulation of garbage or filth that may provide food or shelter for rodents, insects, or other pests; or that may contribute to accidents or disease?
 A(X): Yes
-	Q(15.1):GOTO:Leadpaint
+	Q(15.1):GOTO:roof
 A( ): No
-	Q(15.2):GOTO:Leadpaint
-
-
-Q(Leadpaint):Do you know of any Lead paint that a child under age 6 could reach?
-A(X): Yes
-	Q(16.1):GOTO:roof
-A( ): No
-	Q(16.2):GOTO:roof
-
+	Q(15.2):GOTO:roof
+	
 
 
 Q(roof): Are there defects with the roof, foundation, or other structural defects that may expose you to fire, burns, shock, accident, or other danger?
 A(X): Yes
-	Q(17.1):GOTO:improperlyinstalled
+	Q(16.1):GOTO:improperlyinstalled
 	
 A( ): No
-	Q(17.2):GOTO:improperlyinstalled
+	Q(16.2):GOTO:improperlyinstalled
 
 
 Q(improperlyinstalled): Are there any Improperly installed or maintained electrical, plumbing, or heating appliances or equipment that expose the occupant to fire, burns, shock, accident, or other dangers?
 A(X): Yes
-	Q(18.1):GOTO:hotwater
+	Q(17.1):GOTO:hotwater
 A( ): No
-	Q(18.2):GOTO:hotwater
+	Q(17.2):GOTO:hotwater
 
 
 Q(hotwater): Have you ever gone 24 hours or more without enough hot or cold water (including amount, pressure, and temperature)?
 A(X): Yes
-	Q(19.1):GOTO:detector
+	Q(18.1):GOTO:detector
 A( ): No
-	Q(19.2):GOTO:detector
+	Q(18.2):GOTO:detector
 
 
 
 Q(detector): Do you have a smoke detector or carbon monoxide alarm in good working condition?
 A( ): Yes
-	Q(20.1):GOTO:defects
+	Q(19.1):GOTO:defects
 A(X): No
-	Q(20.2):GOTO:defects
+	Q(19.2):GOTO:defects
 
 
 
 Q(defects): Do you know of any asbestos in the building?
 A(X): Yes
-	Q(21.1):GOTO:kitchensink
+	Q(20.1):GOTO:kitchensink
 A( ): No
-	Q(21.2):GOTO:kitchensink
+	Q(20.2):GOTO:kitchensink
 
 
 
@@ -224,41 +217,41 @@ A: No
 
 Q(washdishes): Is the sink large enough to wash dishes, get hot and cold water, and have proper drainage?
 A( ): Yes
-	Q(28.1):GOTO:did
+	Q(27.1):GOTO:did
 A(X): No
-	Q(28.2):GOTO:did
+	Q(27.2):GOTO:did
 
 Q(did): Did the landlord provide a stove and oven in good working condition? - (unless written agreement requires tenant to provide these).
 A( ): Yes
-	Q(29.1):GOTO:areallsinks
+	Q(28.1):GOTO:areallsinks
 A(X): No
-	Q(29.2):GOTO:areallsinks
+	Q(28.2):GOTO:areallsinks
 
 Q(areallsinks): Are all the sinks, the landlord-installed refrigerators and stoves, and gas- and oil-burning equipment in good working condition?
 A( ): Yes
-	Q(30.1):GOTO:lightfixture
+	Q(29.1):GOTO:lightfixture
 A(X): No
-	Q(30.2):GOTO:lightfixture
+	Q(29.2):GOTO:lightfixture
 
 Q(lightfixture): Have at least one working light fixture and two wall outlets been provided?
 A( ): Yes
-	Q(31.1):GOTO:wateproof
+	Q(30.1):GOTO:wateproof
 A(X): No
-	Q(31.2):GOTO:wateproof
+	Q(30.2):GOTO:wateproof
 
 Q(wateproof): Are the floors smooth, non-corrosive, and waterproof? - (Carpets on floors must have a nonabsorbent and water-repellent backing. Wooden floors must have a water-resistant finish and no cracks)
 A( ): Yes
-	Q(32.1):GOTO:electricaloutlet
+	Q(31.1):GOTO:electricaloutlet
 A(X): No
-	Q(32.2):GOTO:electricaloutlet
+	Q(31.2):GOTO:electricaloutlet
 
 
 Q(electricaloutlet): Is there space and a proper electrical outlet to install a refrigerator?
 A( ): Yes
-	Q(33.1):GOTO:bathroomproblem
+	Q(32.1):GOTO:bathroomproblem
 	
 A(X): No
-	Q(33.2):GOTO:bathroomproblem
+	Q(32.2):GOTO:bathroomproblem
 	
 
 
@@ -270,21 +263,21 @@ A(X): No
 
 Q(bathroomproblem): Is there an issue with the bathroom?
 A: Yes
-	Q(34.1):GOTO:onetoilet
+	Q(33.1):GOTO:onetoilet
 A: No
-	Q(34.2):GOTO:waterissue
+	Q(33.2):GOTO:waterissue
 
 
 Q(onetoilet): Is there one toilet, free from defects in a room not used for living, sleeping, cooking, or eating?
 A( ): Yes
-	Q(35.1):GOTO:onesink
+	Q(34.1):GOTO:onesink
 A(X): No
-	Q(35.2):GOTO:onesink
+	Q(34.2):GOTO:onesink
 
 
 Q(onesink):Is there one sink, free from defects?
 A( ):Yes
-	Q(36.1):GOTO:oneshower
+	Q(35.1):GOTO:oneshower
 A(X): No
 	Q(30.10):GOTO:oneshower
 
@@ -471,7 +464,7 @@ A: No
 
 Q(everyroom): Does every room have windows, skylights, doors, or transoms in the outside wall or roof that open easily to at least 4% of the floor area of that room; or adequate mechanical ventilation systems?
 A( ): Yes
-	Q(58.1):GOTO:transparent
+	Q(57.1):GOTO:transparent
 A(X): No
 	Q(30.66):GOTO:transparent
 
@@ -480,14 +473,14 @@ Q(transparent): Does each room have transparent or translucent glass that admits
 A( ): Yes
 	Q(30.67):GOTO:emergency
 A(X): No
-	Q(59.2):GOTO:emergency
+	Q(58.2):GOTO:emergency
 
 
 Q(emergency): If the building has 10 or more units, does it not have an emergency lighting system in halls and at exits?
 A(X): Yes
-	Q(60.1):GOTO:gasissue
+	Q(59.1):GOTO:gasissue
 A( ): No
-	Q(60.2):GOTO:gasissue	
+	Q(59.2):GOTO:gasissue	
 
 
 
@@ -498,14 +491,14 @@ A( ): No
 
 Q(gasissue): Is there an issue with the electricity, wiring or gas?
 A: Yes
-	Q(61.1):GOTO:metered
+	Q(60.1):GOTO:metered
 A: No
 	Q(59.12):GOTO:freefromobstruction
 
 
 Q(metered): Did the landlord not provide and pay for electricity and gas if your apartment is not individually metered?  -  (unless you have a written rental agreement that says you must pay for electric and gas.)
 A(X): Yes
-	Q(62.1):GOTO:service
+	Q(61.1):GOTO:service
 A( ): No
 	Q(58.45):GOTO:service	
 
@@ -532,7 +525,7 @@ A(X): No
 
 Q(laundtyroom): Did your landlord provide and place electric light fixtures and switches that allow safe and reasonable use of the Laundry room?
 A( ): Yes
-	Q(65.1):GOTO:pantry
+	Q(64.1):GOTO:pantry
 A(X): No
 	Q(58.51):GOTO:pantry
 
@@ -541,93 +534,93 @@ Q(pantry): Did your landlord provide and place electric light fixtures and switc
 A( ): Yes
 	Q(58.52):GOTO:hallways
 A(X): No
-	Q(66.2):GOTO:hallways
+	Q(65.2):GOTO:hallways
 
 
 Q(hallways): Did your landlord provide and place electric light fixtures and switches that allow safe and reasonable use of the hallways, stairways, foyer, or community corridor?
 A( ): Yes
-	Q(67.1):GOTO:closetspace
+	Q(66.1):GOTO:closetspace
 
 A(X): No
-	Q(67.2):GOTO:closetspace
+	Q(66.2):GOTO:closetspace
 
 
 
 Q(closetspace): Did your landlord provide and place electric light fixtures and switches that allow safe and reasonable use of the Closet or storage space?
 A( ): Yes
-	Q(68.1):GOTO:cellar
+	Q(67.1):GOTO:cellar
 A(X): No
-	Q(68.2):GOTO:cellar
+	Q(67.2):GOTO:cellar
 
 
 Q(cellar): Did your landlord provide and place electric light fixtures and switches that allow safe and reasonable use of the Cellar?
 A( ): Yes
-	Q(69.1):GOTO:porch
+	Q(68.1):GOTO:porch
 A(X): No
-	Q(69.2):GOTO:porch
+	Q(68.2):GOTO:porch
 
 
 Q(porch): Did your landlord provide and place electric light fixtures and switches that allow safe and reasonable use of the porch?
 A( ): Yes
-	Q(70.1):GOTO:outsidestairways
+	Q(69.1):GOTO:outsidestairways
 A(X): No
-	Q(70.2):GOTO:outsidestairways
+	Q(69.2):GOTO:outsidestairways
 
 
 Q(outsidestairways): Did your landlord provide and place electric light fixtures and switches that allow safe and reasonable use of the outside stairways and passageways?
 A( ): Yes
-	Q(71.1):GOTO:wiring
+	Q(70.1):GOTO:wiring
 A(X): No
-	Q(71.2):GOTO:wiring
+	Q(70.2):GOTO:wiring
 
 
 Q(wiring): Does the wiring pass under rugs or other floor coverings, or through doorways?
 A(X): Yes
-	Q(72.1):GOTO:temporarywiring
+	Q(71.1):GOTO:temporarywiring
 A( ): No
-	Q(72.2):GOTO:temporarywiring
+	Q(71.2):GOTO:temporarywiring
 
 
 Q(temporarywiring): Is there temporary wiring?   - (this does not include the use of extension cords for portable appliances or fixtures.)
 A(X): Yes
-	Q(73.1):GOTO:Interiorpassageways
+	Q(72.1):GOTO:Interiorpassageways
 A( ): No
-	Q(73.2):GOTO:Interiorpassageways
+	Q(72.2):GOTO:Interiorpassageways
 
 
 Q(Interiorpassageways): If the dwelling has more than one unit, does the landlord not provide enough lighting for 24 hours a day in the Interior passageways?
 A(X): Yes
-	Q(74.1):GOTO:hallwaystwo
+	Q(73.1):GOTO:hallwaystwo
 A( ): No
-	Q(74.2):GOTO:hallwaystwo
+	Q(73.2):GOTO:hallwaystwo
 
 
 Q(hallwaystwo): If the dwelling has more than one unit, does the landlord not provide enough lighting for 24 hours a day in the hallways?
 A(X): Yes
-	Q(75.1):GOTO:stairwaylight
+	Q(74.1):GOTO:stairwaylight
 A( ): No
-	Q(75.2):GOTO:stairwaylight
+	Q(74.2):GOTO:stairwaylight
 
 
 Q(stairwaylight): If the dwelling has more than one unit, does the landlord not provide enough lighting for 24 hours a day in the stairways?
 A(X): Yes	
-	Q(76.1):GOTO:threeormoreunits
+	Q(75.1):GOTO:threeormoreunits
 A( ): No
-	Q(76.2):GOTO:threeormoreunits
+	Q(75.2):GOTO:threeormoreunits
 
 
 Q(threeormoreunits): If the buildings has 3 units or fewer, the light fixtures in common hallways, stairways, and other common passages may be wired to the service for the unit next to the fixture.  If that Is the case does the landlord not pay for electricity to the fixture?   - (unless you do not have a written agreement that says you pay for it. The landlord must also tell other occupants in the building about the agreement.)
 A(X): Yes
 	Q(74.21):GOTO:tenormoreunits
 A( ): No
-	Q(77.2):GOTO:tenormoreunits
+	Q(76.2):GOTO:tenormoreunits
 
 
 Q(tenormoreunits): If the Buildings  has 10 or more units, does it not have back-up emergency lighting independent of the conventional lighting?
 A(X): Yes
 	Q(75.31):GOTO:freefromobstruction
 A( ): No
-	Q(78.2):GOTO:freefromobstruction
+	Q(77.2):GOTO:freefromobstruction
 
 
 
@@ -641,38 +634,38 @@ A( ): No
 
 Q(freefromobstruction): If the property has more than one unit, did the landlord not keep all shared exits free from obstruction?
 A(X): Yes
-	Q(79.1):GOTO:exitsfreefromobstruction
+	Q(78.1):GOTO:exitsfreefromobstruction
 A( ): No
-	Q(79.2):GOTO:exitsfreefromobstruction
+	Q(78.2):GOTO:exitsfreefromobstruction
 
 
 Q(exitsfreefromobstruction): Is the landlord keeping all exits from your unit free from obstruction?    -   (The landlord must also keep any shared exit free from obstruction.)
 A( ): Yes
-	Q(80.1):GOTO:iceandsnow
+	Q(79.1):GOTO:iceandsnow
 A(X): No
-	Q(80.2):GOTO:iceandsnow
+	Q(79.2):GOTO:iceandsnow
 
 
 
 Q(iceandsnow): Is the landlord keeping all exits safe, operable, and free of ice and snow?  -    (This includes exterior stairways and fire escapes. If you have an exit you do not share with anyone, you and your landlord can have a written agreement that says you must keep your exit free of snow and ice.)
 A( ): Yes
-	Q(81.1):GOTO:fireextinguishers
+	Q(80.1):GOTO:fireextinguishers
 A(X): No
-	Q(81.2):GOTO:fireextinguishers
+	Q(80.2):GOTO:fireextinguishers
 
 
 Q(fireextinguishers): Did the landlord install and maintain fire extinguishers as required by the local fire chief?
 A( ): Yes
-	Q(82.1):GOTO:exteriorwindows
+	Q(81.1):GOTO:exteriorwindows
 A(X): No
-	Q(82.2):GOTO:exteriorwindows
+	Q(81.2):GOTO:exteriorwindows
 
 
 Q(exteriorwindows): Is the landlord making sure that all exterior windows that open and all entry doors have working locks?
 A( ): Yes
-	Q(83.1):GOTO:buildingofthree
+	Q(82.1):GOTO:buildingofthree
 A(X): No
-	Q(83.2):GOTO:buildingofthree
+	Q(82.2):GOTO:buildingofthree
 
 
 
@@ -680,7 +673,7 @@ A(X): No
 
 Q(buildingofthree): Does your building have more than three apartments? 
 A: Yes 
-	Q(84.1):GOTO:mainfrontdoor
+	Q(83.1):GOTO:mainfrontdoor
 A: No
 	Q(83.12):GOTO:structuralissue
 
@@ -688,30 +681,30 @@ A: No
 
 Q(mainfrontdoor): Does the main front door that closes and locks automatically and every exterior door have an operating lock?
 A( ): Yes
-	Q(85.1):GOTO:seventyfeettall
+	Q(84.1):GOTO:seventyfeettall
 A(X): No
-	Q(85.2):GOTO:seventyfeettall
+	Q(84.2):GOTO:seventyfeettall
 
 
 Q(seventyfeettall): If the buildings is over 70 feet high, is there no automatic sprinkler system in accordance with the state Building Code?    -   (If you have questions, ask the Housing Inspector.)
 A(X): Yes
-	Q(86.1):GOTO:tenormoreunitss
+	Q(85.1):GOTO:tenormoreunitss
 A( ): No
-	Q(86.2):GOTO:tenormoreunitss
+	Q(85.2):GOTO:tenormoreunitss
 
 
 Q(tenormoreunitss): If the building has 10 or more units, does it not have lighted signs that show both a primary and a secondary means of exit?     -   (The signs must use symbols so that people do not need to speak English to find the exits.)
 A(X): Yes
-	Q(87.1):GOTO:smokedetec
+	Q(86.1):GOTO:smokedetec
 A( ): No
-	Q(87.2):GOTO:smokedetec
+	Q(86.2):GOTO:smokedetec
 
 
 Q(smokedetec): Did the landlord install and keep smoke detectors and carbon monoxide alarms in good working order?  -  (Ask the Fire Marshall if you have questions.)
 A( ): Yes
-	Q(88.1):GOTO:structuralissue
+	Q(87.1):GOTO:structuralissue
 A(X): No
-	Q(88.2):GOTO:structuralissue
+	Q(87.2):GOTO:structuralissue
 
 
 
@@ -723,13 +716,13 @@ A(X): No
 
 Q(structuralissue): Is there a structural maintenance issue?
 A: Yes
-	Q(89.1):GOTO:Foundation
+	Q(88.1):GOTO:Foundation
 A: No
 	Q(88.11):GOTO:sqdwelling
 
 Q(Foundation): Is the Foundation: weathertight, free from chronic dampness, insect-proof, and rodent-proof, without free of holes, cracks, loose plaster and other defects?
 A( ): Yes 
-	Q(90.1):GOTO:floorsweatherright
+	Q(89.1):GOTO:floorsweatherright
 A(X): No
 	Q(88.12):GOTO:floorsweatherright
 
@@ -749,9 +742,9 @@ A(X): No
 
 Q(ceilingweathertight): Are the ceilings weathertight, free from chronic dampness, insect-proof, and rodent-proof, without free of holes, cracks, loose plaster and other defects?
 A( ): Yes 
-	Q(93.1):GOTO:stormwindow
+	Q(92.1):GOTO:stormwindow
 A(X): No
-	Q(93.2):GOTO:stormwindow
+	Q(92.2):GOTO:stormwindow
 
 
 Q(stormwindow): Do the doors and windows have good weather stripping or a storm window or storm door? -   (They must also open fully and easily. All glass panes must be unbroken and caulked correctly.)
@@ -763,21 +756,21 @@ A(X): No
 
 Q(roofweathertight): Is the roof weathertight, free from chronic dampness, insect-proof, and rodent-proof, without free of holes, cracks, loose plaster and other defects?
 A( ): Yes 
-	Q(95.1):GOTO:chimneysandother
+	Q(94.1):GOTO:chimneysandother
 A(X): No
-	Q(95.2):GOTO:chimneysandother
+	Q(94.2):GOTO:chimneysandother
 
 
 Q(chimneysandother): Are the chimneys and other structural elements weathertight, free from chronic dampness, insect-proof, and rodent-proof, without free of holes, cracks, loose plaster and other defects?
 A( ): Yes 
-	Q(96.1):GOTO:safestairs
+	Q(95.1):GOTO:safestairs
 A(X): No
-	Q(96.2):GOTO:safestairs
+	Q(95.2):GOTO:safestairs
 
 
 Q(safestairs): Are the staircases stable with a safe handrail?
 A( ): Yes
-	Q(97.1):GOTO:everyporch
+	Q(96.1):GOTO:everyporch
 A(X): No
 	Q(96.111):GOTO:everyporch
 
@@ -803,16 +796,16 @@ A: No
 
 Q(sqdwelling): Does the dwelling unit have at least 150 square feet of floor space for the first occupant and 100 square feet for each additional occupant?    -  (Add up all the floor space in “habitable rooms” to get the number of square feet in your unit.)
 A( ): Yes
-	Q(99.1):GOTO:onepersonsleeps
+	Q(98.1):GOTO:onepersonsleeps
 A(X): No
-	Q(99.2):GOTO:onepersonsleeps
+	Q(98.2):GOTO:onepersonsleeps
 
 
 Q(onepersonsleeps): Does every bedroom have at least 70 square feet of floor space if only one person sleeps there?   -  (If more than one person is sleeping in the room, it must have 50 square feet of floor space for each person.)
 A( ): Yes
 	Q(98.21):GOTO:generalmaintenanceissue
 A(X): No
-	Q(100.2):GOTO:generalmaintenanceissue
+	Q(99.2):GOTO:generalmaintenanceissue
 
 
 
@@ -823,16 +816,16 @@ A(X): No
 
 Q(generalmaintenanceissue): Is there an issue with the General Maintenance?
 A: Yes
-	Q(101.1):GOTO:commonareasclean
+	Q(100.1):GOTO:commonareasclean
 A: No
 	Q(101.111):GOTO:ratsandroaches
 
 
 Q(commonareasclean): Does the landlord keep common areas clean and sanitary?
 A( ): Yes
-	Q(102.1):GOTO:signinproperty
+	Q(101.1):GOTO:signinproperty
 A(X): No
-	Q(102.2):GOTO:signinproperty
+	Q(101.2):GOTO:signinproperty
 
 
 Q(signinproperty): If the landlord or a manager does not live in the property, does the landlord post a sign with the name, address, and phone number of the landlord or their agent?   -  (The sign must be inside the building and at least 20 square inches.)
@@ -843,7 +836,7 @@ A(X): No
 
 Q(interferewater): Does the landlord turn off or interfere with a tenant’s water, hot water, heat, light, power, or gas?  -  (The only time a landlord may shut off utilities temporarily, is to make necessary repairs. And the landlord must give you “reasonable notice.”)
 A(X): Yes
-	Q(104.1):GOTO:screensonwindows
+	Q(103.1):GOTO:screensonwindows
 A: No
 	Q(100.10):GOTO:screensonwindows
 
@@ -897,30 +890,30 @@ A(X): No
 
 Q(areallelectrical): Are all electrical fixtures, outlets, and wiring installed correctly and kept free of leaks, blocks, and other defects?
 A(  ): Yes
-	Q(112.1):GOTO:smokedetecandcarbon
+	Q(111.1):GOTO:smokedetecandcarbon
 A(X): No
-	Q(112.2):GOTO:smokedetecandcarbon
+	Q(111.2):GOTO:smokedetecandcarbon
 
 	
 Q(smokedetecandcarbon): Are all smoke detectors and carbon monoxide alarms installed correctly and kept free of leaks, blocks, and other defects?
 A(  ): Yes
-	Q(113.1):GOTO:heatingandventilation
+	Q(112.1):GOTO:heatingandventilation
 A(X): No
-	Q(113.2):GOTO:heatingandventilation
+	Q(112.2):GOTO:heatingandventilation
 
 
 Q(heatingandventilation): Is the heating and ventilation equipment installed correctly and kept free of leaks, blocks, and other defects?
 A( ): Yes
-	Q(114.1):GOTO:washingmachine
+	Q(113.1):GOTO:washingmachine
 A(X): No
-	Q(114.2):GOTO:washingmachine
+	Q(113.2):GOTO:washingmachine
 
 
 Q(washingmachine): Is the Landlord-installed equipment, including dishwashers, washing machines, dryers, refrigerators, and garbage disposals installed correctly and kept free of leaks, blocks, and other defects?
 A( ): Yes
-	Q(115.1):GOTO:ratsandroaches
+	Q(114.1):GOTO:ratsandroaches
 A(X): No
-	Q(115.2):GOTO:ratsandroaches
+	Q(114.2):GOTO:ratsandroaches
 	
 
 
@@ -935,9 +928,9 @@ A(X): No
 
 Q(ratsandroaches): Are there rats, roaches, mice, bedbugs, or other insects in the apartment or building?   -  (The landlord must exterminate them when they are found in common areas or in any individual apartment in buildings with two or more units.)
 A(X): Yes
-	Q(116.1):GOTO:watertightgarbage
+	Q(115.1):GOTO:watertightgarbage
 A( ): No
-	Q(116.2):GOTO:watertightgarbage
+	Q(115.2):GOTO:watertightgarbage
 
 
 
@@ -945,41 +938,41 @@ A( ): No
 
 Q(watertightgarbage): If the building has 3 or more units, does the landlord provide enough watertight garbage cans?   -  (Cans must have tightly fitting covers. The landlord must put cans in places that are convenient to tenants and do not allow odors into your living space.)
 A(  ): Yes
-	Q(117.1):GOTO:takecareofgarbage
+	Q(116.1):GOTO:takecareofgarbage
 A(X): No
-	Q(117.2):GOTO:takecareofgarbage
+	Q(116.2):GOTO:takecareofgarbage
 
 
 Q(takecareofgarbage): In buildings with 3 or more units, does the landlord not take care of collecting and disposing of garbage?
 A(X): Yes
-	Q(118.1):GOTO:leadpaints
+	Q(117.1):GOTO:leadpaints
 A( ): No
-	Q(118.2):GOTO:leadpaints
+	Q(117.2):GOTO:leadpaints
 
 
 Q(leadpaints): Is lead paint used on any surface?
 A(X): Yes
-	Q(119.1):GOTO:childundersix
+	Q(118.1):GOTO:childundersix
 A( ): No
-	Q(119.2):GOTO:childundersix
+	Q(118.2):GOTO:childundersix
 
 
 
 Q(childundersix): If you have a child under the age of 6, does your landlord not remove or properly cover lead paint up to 5 feet from the floor?    -  (Repainting with a non-lead paint is not good enough.)(It is illegal to refuse to rent or to evict a household because of lead paint.)
 A(X): Yes
-	Q(120.1):GOTO:inspector	
-A: No
-	Q(120.2):GOTO:inspector
+	Q(119.1):GOTO:inspector	
+A( ): No
+	Q(119.2):GOTO:inspector
 
 
 Q(inspector): Are there any other violations of the Sanitary Code the inspector finds dangerous to health and safety?
 A(X): Yes
-	Q(121.1):GOTO:theend
+	Q(120.1):GOTO:theend
 A( ): No
 	Q(18.31):GOTO:theend
 
 Q(theend): The End. Thank you for taking this QnA. Would you like a copy of the results? - (recommended)
-A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')] Yes
+A:[javascript:submit2('http://colarusso.pythonanywhere.com/','GET','','','','json_doc','_blank')]  Yes
 	
 A: No
 	Q(efge):GOTO:end
