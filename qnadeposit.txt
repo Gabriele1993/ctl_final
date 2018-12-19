@@ -116,10 +116,10 @@ X:
 
 Q(date): What is today's date?
 X:
-	Q(14.1):GOTO:proprietario
+	Q(14.1):GOTO:comesichiama
 
 
-Q(proprietario): What is your landlord's name?
+Q(comesichiama): What is your landlord's name?
 X:
 	Q(frejg):GOTO:indirizzodue
 
